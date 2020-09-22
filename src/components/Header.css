@@ -3,6 +3,11 @@
     width: 100%;   /*vital*/
     padding: 50px 0;
     z-index: 100;
+    transition: 0.8s cubic-bezier(0.4, 0.82, 0.2, 1);
+}
+.HeaderScrolled {
+    background: rgba(0,0,0,.8);
+    padding: 15px 0;
 }
 .HeaderGroup {
     max-width: 800px;
