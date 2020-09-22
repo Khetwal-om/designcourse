@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Card from "../components/Card"
 
 const IndexPage = () => (
   <Layout>
@@ -37,7 +37,17 @@ const IndexPage = () => (
         </svg>
 
       </div>
-    </div>
+      </div>
+      <div className="Cards">
+          <h2>11 courses,more coming</h2>
+          <div className="CardGroup">
+              <Card  title="React for Designers" text="12 sections" image={require('../images/wallpaper.jpg')}/>
+              <Card  title="React for Designers" text="12 sections" image={require('../images/wallpaper.jpg')}/>
+              <Card  title="React for Designers" text="12 sections" image={require('../images/wallpaper.jpg')}/>
+              <Card  title="React for Designers" text="12 sections" image={require('../images/wallpaper.jpg')}/>
+            </div>
+      </div>
+
   </Layout>
 )
 

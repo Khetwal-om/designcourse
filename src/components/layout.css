@@ -17,10 +17,11 @@ a{
 
 .Hero{
   background: url('../images/design.jpg');
-  /* height: 100vh; */
+  height: auto;
   background-size: cover;
   background-position: center;
   position: relative;
+
  
 }
 
@@ -77,17 +78,45 @@ a{
   grid-template-columns: repeat(6,1fr);
   margin: 100px 0;
   grid-gap: 40px;
+  justify-items: center;
+}
+
+
+
+
+.Cards h2{
+  margin: 50px 20px;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(104deg,#050A27 0%,#4A54BC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
 
 
 
+.CardGroup {
+  margin: 50px 40px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  justify-items: center;
+}
 
+@media (max-width: 1060px) {
+  .CardGroup {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-
-
-
+@media (max-width: 720px) {
+  .CardGroup {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 
 @media (max-width: 640px){
@@ -104,6 +133,7 @@ a{
     grid-template-columns: repeat(3,1fr);
   }
 }
+
 
 
 
