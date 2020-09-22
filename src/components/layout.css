@@ -17,11 +17,11 @@ a{
 
 .Hero{
   background: url('../images/design.jpg');
-  height: 100vh;
+  /* height: 100vh; */
   background-size: cover;
   background-position: center;
-
-
+  position: relative;
+ 
 }
 
 .HeroGroup{
@@ -35,11 +35,19 @@ a{
   color: white;
   font-size: 60px;
   line-height: 1.2;
+  animation: HeroAnimation;
+  opacity: 0;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.82, 0.2, 1);
+  animation-delay: 0.1s;
 }
 .Hero p{
   color: rgba(255,255,255,0.8);
   font-size: 30px;
+  opacity: 0;
   line-height: 1.5;
+  animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.25, 0.82, 0.265, 1);
 }
 .Hero a{
   font-size: 18px;
@@ -50,12 +58,26 @@ a{
   padding: 9px 20px;
   border: 1px solid rgba(255,255,255,.25);
    border-radius: 20px;
+   transition: 0.8 cubic-bezier(0.2, 0.82, 0.25, 1);
 }
 
+.Hero a:hover{
+  background: white;
+  color: black;
+}
 
+.Hero svg{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 
-
-
+.Hero .Logos { 
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  margin: 100px 0;
+  grid-gap: 40px;
+}
 
 
 
@@ -77,5 +99,41 @@ a{
   }
   .Hero p{
     font-size: 24px;
+  }
+  .Hero .Logos{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes HeroAnimation {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
   }
 }
